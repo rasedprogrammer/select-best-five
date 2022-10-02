@@ -1,0 +1,39 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+body {
+	background-color: #151515;
+	color: white;
+}
+.header-container {
+	background-color: #0d0d0d;
+	margin-bottom: 50px;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+}
+.header-container h1 {
+	font-size: 76px;
+	font-family: "Berkshire Swash", cursive;
+	color: #ff5e19;
+}
+.header-text {
+	padding: 0 6%;
+	padding-top: 10px;
+	font-size: 20px;
+}
+.player-info {
+	background-color: #0d0d0d;
+	padding: 10px;
+}
+.budget-container {
+	background-color: #0d0d0d;
+}
+.select-player-list {
+	background-color: #0d0d0d;
+}
+footer {
+	height: 80px;
+}
+footer p {
+	padding-top: 20px;
+	text-align: center;
+}
