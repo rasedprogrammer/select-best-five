@@ -3,18 +3,6 @@ function playerLength(playerLength) {
 	const playerL = playerLength;
 	return playerL;
 }
-function getFieldValueById(elementId) {
-	const playerExpenseField = document.getElementById(elementId);
-	const playerExpenseString = playerExpenseField.innerText;
-	const previousPlayerExpense = parseInt(playerExpenseString);
-	return previousPlayerExpense;
-}
-function getElementValueById(elementId) {
-	const managerFeeField = document.getElementById(elementId);
-	const managerFeeFieldString = managerFeeField.value;
-	const managerFee = parseInt(managerFeeFieldString);
-	return managerFee;
-}
 // Player List Find Event Listener
 document.getElementById("players").addEventListener("click", function (event) {
 	const playerName = event.target.parentNode.childNodes[1].innerText;
