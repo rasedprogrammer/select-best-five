@@ -9,6 +9,12 @@ function getFieldValueById(elementId) {
 	const previousPlayerExpense = parseInt(playerExpenseString);
 	return previousPlayerExpense;
 }
+function getElementValueById(elementId) {
+	const managerFeeField = document.getElementById(elementId);
+	const managerFeeFieldString = managerFeeField.value;
+	const managerFee = parseInt(managerFeeFieldString);
+	return managerFee;
+}
 // Player List Find Event Listener
 document.getElementById("players").addEventListener("click", function (e) {
 	const playerName = e.target.parentNode.childNodes[1].innerText;
@@ -17,16 +23,10 @@ document.getElementById("players").addEventListener("click", function (e) {
 	playerList.classList.add("player-list");
 	playerList.innerText = playerName;
 	playerContainer.appendChild(playerList);
-	// const playerListE = playerList.parentNode.childNodes.length;
-	// if (playerListE.length >= "5") {
-	// 	playerList.classList.return("player-list");
-	// }
 });
 // Calculate Event Listener
 document.getElementById("btn-calculate").addEventListener("click", function () {
-	const perPlayerRateField = document.getElementById("player-rate-field");
-	const perPlayerRateString = perPlayerRateField.value;
-	const perPlayerRate = parseInt(perPlayerRateString);
+	const perPlayerRate = getElementValueById("player-rate-field");
 
 	const playerListLengthElement = document.querySelectorAll(".player-list");
 	let playerNumber = playerListLengthElement.length;
@@ -44,13 +44,8 @@ document
 	.addEventListener("click", function () {
 		const previousPlayerExpense = getFieldValueById("player-expense");
 
-		const managerFeeField = document.getElementById("manager-fee-field");
-		const managerFeeFieldString = managerFeeField.value;
-		const managerFee = parseInt(managerFeeFieldString);
-
-		const coachFeeField = document.getElementById("coach-fee-field");
-		const coachFeeFieldString = coachFeeField.value;
-		const coachFee = parseInt(coachFeeFieldString);
+		const managerFee = getElementValueById("manager-fee-field");
+		const coachFee = getElementValueById("coach-fee-field");
 
 		const totalExpenseElement = document.getElementById("total-expense");
 		totalExpenseElement.innerText =
