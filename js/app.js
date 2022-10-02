@@ -16,8 +16,8 @@ function getElementValueById(elementId) {
 	return managerFee;
 }
 // Player List Find Event Listener
-document.getElementById("players").addEventListener("click", function (e) {
-	const playerName = e.target.parentNode.childNodes[1].innerText;
+document.getElementById("players").addEventListener("click", function (event) {
+	const playerName = event.target.parentNode.childNodes[1].innerText;
 	const playerContainer = document.getElementById("select-player");
 	const playerList = document.createElement("li");
 	playerList.classList.add("player-list");
