@@ -3,6 +3,12 @@ function playerLength(playerLength) {
 	const playerL = playerLength;
 	return playerL;
 }
+function getFieldValueById(elementId) {
+	const playerExpenseField = document.getElementById(elementId);
+	const playerExpenseString = playerExpenseField.innerText;
+	const previousPlayerExpense = parseInt(playerExpenseString);
+	return previousPlayerExpense;
+}
 // Player List Find Event Listener
 document.getElementById("players").addEventListener("click", function (e) {
 	const playerName = e.target.parentNode.childNodes[1].innerText;
@@ -36,12 +42,7 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
 document
 	.getElementById("btn-total-calculate")
 	.addEventListener("click", function () {
-		const playerListLengthElement = document.querySelectorAll(".player-list");
-		let playerNumber = playerListLengthElement.length;
-
-		const playerExpenseField = document.getElementById("player-expense");
-		const playerExpenseString = playerExpenseField.innerText;
-		const previousPlayerExpense = parseInt(playerExpenseString);
+		const previousPlayerExpense = getFieldValueById("player-expense");
 
 		const managerFeeField = document.getElementById("manager-fee-field");
 		const managerFeeFieldString = managerFeeField.value;
